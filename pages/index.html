@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar CEP ou Endereço no Mapa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="map-container">
+        <div id="form-container">
+            <textarea id="address" placeholder="Digite CEPs, cidade ou endereço (um por linha)"></textarea>
+            <select id="pin-color">
+                <option value="red" selected>Vermelho</option>
+                <option value="blue">Azul</option>
+                <option value="green">Verde</option>
+                <option value="yellow">Amarelo</option>
+                <option value="purple">Roxo</option>
+            </select>
+            <div>
+                <button onclick="addPins()">Adicionar</button>
+            </div>
+        </div>
+        <div id="map"></div>
+        <div id="pins-list">
+            <h3 id="pins-title">Pontos selecionados</h3>
+            <ul id="list"></ul>
+            <button id="delete-all" onclick="clearInput()">Excluir Todos</button>
+        </div>
+    </div>
+    <!-- Rótulo do Criador -->
+    <div id="creator-box">
+        <p>Desenvolvido por @GiovanneFerrari</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX1t7qNlEl1t8HlBEmKMSXhM5j6cnzKr8&callback=initMap" async defer></script>
+</body>
+</html>
